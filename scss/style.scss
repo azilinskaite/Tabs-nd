@@ -1,0 +1,108 @@
+@import url('https://fonts.googleapis.com/css2?family=Bungee&family=Rubik+Bubbles&family=Rubik+Spray+Paint&family=Unbounded:wght@300;600&display=swap');
+
+* { 
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body { 
+  min-height: 600px;
+  background: url(../images/bg.jpeg);
+  color: white;
+  position: relative;
+  text-align: center;
+  font-family: unbounded;
+  padding: 30px;
+}
+body::before { 
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.4);
+  z-index: -1;
+}
+h1 { 
+  margin-bottom: 30px;
+  font-family: bungee;
+  font-size: 3em;
+}
+h2 { 
+  font-size: 1.4em;
+  margin-bottom: 20px;
+}
+.buttons { 
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  flex-wrap: wrap;
+  flex-direction: column;
+}
+button { 
+  width: 160px;
+  height: 40px;
+  border: none;
+  border-radius: 8px;
+  background: #34294f4d;
+  box-shadow: 3px 3px 5px #ffffffca;
+  color: white;
+  font-size: 1em;
+  transition: 0.3s;
+  position: relative;
+  overflow: hidden;
+}
+button:before { 
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: lightgray;
+  z-index: -1;
+  transition: 0.3s;
+}
+button:hover::before { 
+  left: 0;
+}
+button:hover { 
+  cursor: pointer;
+  box-shadow: 4px 4px 7px orangered;
+  transition-delay: 0.1s;
+}
+.selected { 
+  background: #ffffffca;
+  box-shadow: 4px 4px 5px #f5f5f586;
+  color: orangered;
+}
+.tabs { 
+  max-width: 600px;
+  margin: 10px auto;
+  padding: 30px;
+  border-radius: 8px;
+img { 
+  height: 400px;
+  width: 400px;
+  padding: 10px;
+  margin-bottom: 20px;
+  object-fit: contain;
+  background: orangered;
+  border-radius: 8px;
+}
+img:nth-of-type(2) { 
+  background: yellow;
+}
+p { 
+  text-align: justify;
+  font-size: 0.8em;
+}}
+
+.tab { 
+  display: none;
+}
+.block { 
+  display: block;
+}
